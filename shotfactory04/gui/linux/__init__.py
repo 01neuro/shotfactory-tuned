@@ -136,8 +136,8 @@ class Gui(base.Gui):
         error = self.shell(command)
         if error:
             raise RuntimeError("could not start the browser")
-        print "Sleeping %d seconds while page is loading." % options.wait
-        time.sleep(options.wait - 10)
+        print "Sleeping %d seconds while page is loading." % (options.wait - 12)
+        time.sleep(options.wait - 22)
         self.maximize()
         time.sleep(10)
 
