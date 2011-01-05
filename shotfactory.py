@@ -66,9 +66,9 @@ def can_reuse_vnc_server(options, config, previous):
     Check if the existing VNC server can be reused.
     """
     if not options.reuse_vnc_server:
-        pass # print "VNC server reuse is not enabled."
+        print "VNC server reuse is not enabled."
     elif not options.reuse_count:
-        pass # print "No VNC server is running yet."
+        print "No VNC server is running yet."
     elif options.reuse_count >= options.reuse_vnc_server:
         print "VNC server was already reused %d times." % options.reuse_count
     elif 'width' in config and config['width'] != previous['width']:
