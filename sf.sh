@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 PREFIX=$1
 PASSWORD=$2
 NUMBER=$3
