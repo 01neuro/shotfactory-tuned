@@ -81,6 +81,7 @@ def can_reuse_vnc_server(options, config, previous):
         print "Different color depth %d (was %d)." % (
             config['bpp'], previous['bpp'])
     else:
+        print "Reusing VNC server."
         return True
 
 
@@ -89,9 +90,9 @@ def can_reuse_browser(options, gui, config, previous):
     Check if the existing browser window can be reused.
     """
     if not options.reuse_browser:
-        pass # print "Browser reuse is not enabled."
+        print "Browser reuse is not enabled."
     elif not options.reuse_count:
-        pass # print "No browser is running yet."
+        print "No browser is running yet."
     elif options.reuse_count >= options.reuse_browser:
         print "Browser was already reused %d times." % options.reuse_count
     elif not hasattr(gui, 'reuse_browser'):
