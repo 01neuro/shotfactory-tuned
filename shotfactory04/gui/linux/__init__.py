@@ -157,3 +157,13 @@ class Gui(base.Gui):
         self.shell('killall -q -9 kdeinit4')
         self.shell('killall -q -9 artsd')
 
+    def close_all_browsers(self):
+        process_names = (
+            'firefox-bin',                                                                                                                         
+            'konqueror',
+            'npviewer.bin',
+            'chrome',
+            'nspluginviewer',
+            )
+        for name in process_names:
+            self.shell('killall -q -9 %s' % name)
